@@ -12,6 +12,12 @@ it("show reservations per user correctly", async () => {
 
 it("no render your tickets heading when user no have tickets", async () => {
   render(<UserReservations userId={2} />);
+
+  const purshaseButton = await screen.findByRole("button", {
+    name: "Purchase tickets",
+  });
+  expect(purshaseButton).toBeInTheDocument();
+
   const yourTicketsHeading = await screen.queryByRole("heading", {
     name: "Your Tickets",
   });
