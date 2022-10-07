@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "db:reset": "copyfiles   __tests__/__mocks__/fakeData/json/*.json __tests__/__mocks__/db",
+    "db:reset": "copyfiles -f __tests__/__mocks__/fakeData/json/*.json __tests__/__mocks__/db",
     "cypress": "cypress open",
     "cypress:open": "env-cmd -f .env.test.local cypress open",
     "dev": "next dev",
