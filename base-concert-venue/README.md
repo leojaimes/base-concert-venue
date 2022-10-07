@@ -17,3 +17,7 @@
 ## Running the App
 
 Run `npm run dev`. The app will be found at [http://localhost:3000]
+
+
+https://github.com/bonnie/udemy-NEXTJS-TESTING/blob/main/tested-concert-venue-nextjs12.2-cypress10.3/package.json
+https://www.udemy.com/course/nextjs-testing/learn/lecture/34206832#questions/18370720/  
