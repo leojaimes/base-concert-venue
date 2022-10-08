@@ -8,9 +8,7 @@ it("displays correct heading when navigating to shows route", () => {
 });
 
 it("displays correct heading when navigating to bands rout", () => {
-  cy.visit("/");
+  cy.visit("/auth/signin");
   cy.findByRole("button", { name: /bands/i }).click();
-  cy.findByRole("heading", { name: /our illustrious performers/i }).should(
-    "exist"
-  );
+  cy.findByRole("heading", { name: /our Illustrious Performers/i });
 });
