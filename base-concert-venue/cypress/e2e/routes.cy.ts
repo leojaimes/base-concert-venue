@@ -1,3 +1,4 @@
+export { };
 it("displays correct heading when navigating to shows route", () => {
   cy.visit("/");
   cy.findByRole("button", { name: /shows/i }).click();
