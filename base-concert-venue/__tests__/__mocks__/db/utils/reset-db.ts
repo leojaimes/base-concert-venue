@@ -6,7 +6,8 @@ import { fakeUserReservations } from "../../fakeData/userReservations";
 export const resetDB = async () => {
   // fake safe against  resetting production db!
 
-  const safeToReset = process.env.NODE_ENV === "test";
+  const safeToReset =
+    process.env.NODE_ENV === "test" || process.env.CYPRESS === "true";
 
   if (safeToReset === false) {
     console.log(
@@ -16,6 +17,8 @@ export const resetDB = async () => {
     return;
   }
   // overwrithing data in files
+  console.log("overwrithing data in files");
+
   const { fakeBands, fakeReservations, fakeShows, fakeUsers } =
     await readFakeData();
   await Promise.all([
