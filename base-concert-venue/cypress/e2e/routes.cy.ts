@@ -12,3 +12,7 @@ it("displays correct heading when navigating to bands rout", () => {
   cy.findByRole("button", { name: /bands/i }).click();
   cy.findByRole("heading", { name: /our Illustrious Performers/i });
 });
+
+it("reset the database", () => {
+  cy.task("db:reset");
+});
