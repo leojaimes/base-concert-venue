@@ -1,10 +1,12 @@
 // import { describe, expect, test } from "@jest/globals";
+import "@testing-library/jest-dom/extend-expect";
+
 import { render, screen } from "@testing-library/react";
 
 import { readFakeData } from "@/__tests__/__mocks__/fakeData";
 import BandComponent from "@/pages/bands/[bandId]";
 
-// const expect: jest.Expect;
+const expect: jest.Expect;
 
 it("band component displays correct band", async () => {
   expect(1 + 1).toBe(2);
